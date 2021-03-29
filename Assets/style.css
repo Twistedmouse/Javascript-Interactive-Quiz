@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* the same as selecting html but specificity is higher */
+:root{
+    /* placeholder color make better background! */
+    background: radial-gradient(circle, rgba(31,143,57,0.9752275910364145) 14%, rgba(238,174,215,1) 75%, rgba(43,46,48,1) 100%);
+    font-size: 17rem;
+}
+
+/* selects all elements */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* makes rems and ems = 10px */
+    font-size: 62.5%;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.8px;
+}

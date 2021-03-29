@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/Assets/style.css"/>
+    <title>Js Quiz.</title>
 </head>
 <body>
+    <!-- the container to control the placement of the home section -->
+    <section class="contanier">
+         <div id="home" class="flex-column flex-center">
+             <h1>🎲Start Timer and Begin Quiz? ⏲</h1>
+             <!-- paragraph in seperate article so i can use it in css better -->
+             <article id="rulesp">
+                 <p>
+                     You have 60 seconds to complete this general knowlage javascript quiz.<br>
+                     You must get the correct answer to move on. <br>
+                     If you guess incorrectly 3 seconds will be subtracted from the timer.<br>
+                     Time remianing will be your final score. <br>
+                     Please leave your initials at the end to add it to Highscores.
+                 </p>
+             </article>
+             <!-- links to the other pages -->
+             <a href="/game.html" class="btn">Start! ▶️</a>
+             <a href="/highscores.html" id="highscores-btn" class="btn">Highscores. 👑</a>
+         </div>
+    </section>
     
+
+<footer>
+    <!-- my silly lil footer -->
+    <h4>🎮 Created by Tristan Fontanini 🐭</h4>
+</footer>
+<script src="/Assets/quiz.js"></script>
 </body>
 </html>

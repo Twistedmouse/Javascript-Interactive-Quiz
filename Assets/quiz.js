@@ -1,4 +1,4 @@
-/* psuedo code: 
+/* pseudo code: 
 i must make a multi choice quick 
 -layout buttons on screen for answers if correct change color to green if wrong change color 
 to red 
@@ -7,9 +7,10 @@ to red
 -when start button is clicked timer starts
 -when timer ends show field to enter initials in and save to local to keep highscore
 -when a question is answerd correctly must disply next question
+-what ever time is left on timer save as highscore
 -after initials has be saved have a highscore and go back button 
 
--write psuedo for each section eg timer, answers, end screen
+-write pseudo for each section eg timer, answers, end screen
 
 quiz buttons:
 -butons on hover highlight or go opaic
@@ -26,4 +27,9 @@ End screen:
 Highscore button/screen:
 -
 
+
+
+remember condition statements eh (var age = 9;
+// condition ? value1 : value2
+(age >= 18) ? 'adult' : 'minor'; // evaluats to minor)
 */

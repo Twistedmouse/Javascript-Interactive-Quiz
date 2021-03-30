@@ -1,10 +1,10 @@
+/* imports font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 /* the same as selecting html but specificity is higher */
 :root{
     /* placeholder color make better background! */
-    background: radial-gradient(circle, rgba(31,143,57,0.9752275910364145) 14%, rgba(238,174,215,1) 75%, rgba(43,46,48,1) 100%);
-    font-size: 17rem;
+    background: radial-gradient(circle, rgba(31,143,57,0.9752275910364145) 14%, rgb(231, 150, 44) 75%, rgba(43,46,48,1) 100%);
 }
 
 /* selects all elements */
@@ -14,6 +14,63 @@
     padding: 0;
     /* makes rems and ems = 10px */
     font-size: 62.5%;
+    /* font from google fonts */
     font-family: 'Permanent Marker', cursive;
     letter-spacing: 0.8px;
+}
+
+h1{
+    font-size: 5.2rem;
+    color: rgba(255, 232, 250, 0.952);
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    font-size: 2.7rem;
+    margin-bottom: 200px;
+}
+/* main container to hold my card */
+.contanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 10rem;
+    text-align: center;
+    /* padding: 0.2em; */
+}
+
+#rulesp {
+    background: linear-gradient(0deg, rgba(205,151,182,1) 0%, rgba(216, 164, 23, 0.945) 28%, rgba(216, 164, 23, 0) 60%);
+    border-radius: 6px;
+    padding: 3px;
+    width: 600px;
+    margin: auto;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.btn{
+    text-align: center;
+    color: rgba(245, 245, 245, 0.87);
+    background:linear-gradient(90deg, rgb(78, 181, 255)10%, rgb(154, 141, 141)90% );
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 0.6rem;
+}
+.btn:hover {
+    cursor: pointer;
+    color: rgb(8, 8, 8);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(204, 230, 162, 0.6);
+    background:linear-gradient(90deg, rgb(78, 181, 255)0%, rgb(186, 193, 64)90%);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
 }

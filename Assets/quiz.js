@@ -1,5 +1,6 @@
 /* pseudo code: 
 i must make a multi choice quick 
+-make afew differnet html pages for each section of the quiz start, content and the highscores
 -layout buttons on screen for answers if correct change color to green if wrong change color 
 to red 
 -hover over button make slightly opaic to highlight choice

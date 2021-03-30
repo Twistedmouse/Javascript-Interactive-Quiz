@@ -3,8 +3,21 @@
 
 /* the same as selecting html but specificity is higher */
 :root{
-    /* placeholder color make better background! */
-    background: radial-gradient(circle, rgba(31,143,57,0.9752275910364145) 14%, rgb(231, 150, 44) 75%, rgba(43,46,48,1) 100%);
+    /* gradiet Varaiable */
+    --gradient: linear-gradient(45deg, #ffffff6d, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #eaf5268e, #f8ff70);
+    background-image:var(--gradient);
+    background-size: 600%;
+    background-position: left;
+    animation: grad-bg 40s infinite alternate;
+}
+
+@keyframes grad-bg {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
 
 /* selects all elements */
@@ -36,14 +49,14 @@ h4{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     font-size: 10rem;
     text-align: center;
-    /* padding: 0.2em; */
 }
 
 #rulesp {
-    background: linear-gradient(0deg, rgba(205,151,182,1) 0%, rgba(216, 164, 23, 0.945) 28%, rgba(216, 164, 23, 0) 60%);
+    background: linear-gradient(0deg, rgba(205, 151, 182, 0.843) 0%, rgba(231, 176, 25, 0.898) 23%, rgba(231, 176, 25, 0.449) 40%, rgba(216, 164, 23, 0) 65%);
+    box-shadow: 0 0 0 0;
     border-radius: 6px;
     padding: 3px;
     width: 600px;
@@ -66,8 +79,8 @@ h4{
 .btn:hover {
     cursor: pointer;
     color: rgb(8, 8, 8);
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(204, 230, 162, 0.6);
-    background:linear-gradient(90deg, rgb(78, 181, 255)0%, rgb(186, 193, 64)90%);
+    box-shadow: 0 0.6rem 1.8rem 0 rgba(201, 238, 141, 0.6);
+    background:linear-gradient(90deg, rgb(78, 181, 255)0%, rgb(230, 255, 3)90%);
 }
 
 .btn[disabled]:hover {

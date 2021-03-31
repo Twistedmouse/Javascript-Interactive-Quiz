@@ -57,7 +57,7 @@ h4{
 
 #rulesp {
     background: linear-gradient(0deg, rgba(205, 151, 182, 0.843) 0%, rgba(231, 176, 25, 0.898) 23%, rgba(231, 176, 25, 0.449) 40%, rgba(216, 164, 23, 0) 65%);
-    box-shadow: 0 0 0 0;
+    /* box-shadow: -1px 2px  rgba(177, 177, 177, 0.251); */
     border-radius: 6px;
     padding: 3px;
     width: 600px;

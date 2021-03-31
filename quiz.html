@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="/Assets/quiz.css">
 </head>
 <body>
-    <section class="container">
+    <!-- this container is my main hud with all hud items inside -->
+    <section class="contanier">
         <div id="quiz">
             <div id="hud">
                 <div class="hud-items">
                     <p id="progressText" class="hud-prefix">
                         quiestion
                     </p>
-                    <div id="pregressBar">
+                    <!-- progress bar to show were you are up to in the quiz (style in css) -->
+                    <div id="progressBar">
                         <div id="progressBarFull"></div>
                     </div>
                 </div>
+                <!-- score hud item -->
                 <div class="hud-item">
                     <p class="hud-prefix">
                         score
@@ -29,7 +32,30 @@
                     </h1>
                 </div>
             </div>
+            <!-- question section -->
+            <h2 id="question">What is the answer to the quiestion</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <!-- data attribute number stores number we dont need visable -->
+                <p class="choice-text" data-number="1">Choice1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <!-- data attribute number stores number we dont need visable -->
+                <p class="choice-text" data-number="2">Choice2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <!-- data attribute number stores number we dont need visable -->
+                <p class="choice-text" data-number="3">Choice3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <!-- data attribute number stores number we dont need visable -->
+                <p class="choice-text" data-number="4">Choice4</p>
+            </div>
         </div>
     </section>
+    <script src="quiz.js"></script>
 </body>
 </html>

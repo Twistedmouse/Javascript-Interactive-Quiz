@@ -4,7 +4,7 @@
 /* the same as selecting html but specificity is higher */
 :root{
     /* gradiet Varaiable */
-    --gradient: linear-gradient(45deg, #ffffff6d, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #ffe9208e, #f8ff70);
+    --gradient: linear-gradient(45deg, #ffffff6d, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #f8ff70, #ffffff6d);
     background-image:var(--gradient);
     background-size: 600%;
     background-position: left;
@@ -50,7 +50,7 @@ h4{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     font-size: 10rem;
     text-align: center;
 }

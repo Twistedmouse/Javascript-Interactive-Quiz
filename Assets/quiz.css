@@ -1,0 +1,76 @@
+
+body{
+    color: whitesmoke;
+}
+
+#question{
+    text-shadow: 2px 2px grey;
+    padding: 1rem;
+}
+
+.choice-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12rem;
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+    background:linear-gradient(90deg, rgb(78, 181, 255)30%, rgb(154, 141, 141)90% );
+    width: 50rem;
+    height: 5rem;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.6rem 1.4rem 0 rgba(84, 93, 0, 0.803);
+    /* creates an effect as if the btn is poping out the screen */
+    transform: scale(1.04);
+    transform: transform 100ms;
+}
+
+.correct {
+    background: linear-gradient(90deg, whitesmoke, greenyellow, green, ghostwhite);
+    background-position: left;
+    background-size: ;
+    animation: grad-bg 5s infinite alternate;
+}
+.incorrect {
+    background: linear-gradient(90deg, rgb(81, 80, 80), rgb(253, 4, 4), rgb(98, 5, 5), rgb(35, 4, 4))
+    background-position: left;
+    background-size: ;
+    animation: grad-bg 5s infinite alternate;
+}
+
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.hud-main-text{
+    text-align: center;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(250, 251, 250);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .choice-container{
+        min-width: 40rem;
+    }
+
+    /* body{
+        height: 100%;
+    } */
+}

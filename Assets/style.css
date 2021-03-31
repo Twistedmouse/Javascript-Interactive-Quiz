@@ -88,3 +88,43 @@ h4{
     cursor: not-allowed;
     box-shadow: none;
 }
+
+/* media queries for responsivness */
+@media screen and (max-width: 768px){
+    .contanier{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .contanier{
+        width: 60vw;
+    }
+    a{
+        margin-left: 22rem;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-top: 2rem;
+        font-size: 40%;
+    }
+    h1{
+        font-size: 50%;
+        width: 100vw;
+        margin-left: 18rem;
+        padding-right: 2rem;
+    }
+    h4{
+        position: relative;
+        
+        left: 3rem;
+        font-size: 15px;
+    }
+    #rulesp{
+        width: 100vw;
+        font-size: 40%;
+        margin-left: 16.5rem;
+    }
+}

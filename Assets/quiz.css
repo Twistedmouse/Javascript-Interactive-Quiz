@@ -23,7 +23,7 @@ body{
 .choice-container:hover{
     cursor: pointer;
     box-shadow: 0 0.6rem 1.4rem 0 rgba(84, 93, 0, 0.803);
-    /* creates an effect as if the btn is poping out the screen */
+    /* creates an effect as if the btn is popping out the screen */
     transform: scale(1.04);
     transform: transform 100ms;
 }

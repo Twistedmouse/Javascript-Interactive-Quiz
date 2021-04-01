@@ -75,6 +75,7 @@ body{
     } */
 }
 
+/* media queries for responsivness */
 @media screen and (max-width: 320px) {
     .contanier{
         min-width: 100vw;

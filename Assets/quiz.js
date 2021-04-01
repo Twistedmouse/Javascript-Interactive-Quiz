@@ -47,8 +47,78 @@ let score = 60
 let questionCounter = 0
 let availableQuestions = []
 
+// an array that is basically the whole quiz
 let questions = [
     {
-        question: ""
-    }
+        question: "Inside which HTML element do we put the javascript?",
+        choice1: "<js>",
+        choice2: "<scripting>",
+        choice3: "<javascript>",
+        choice4: "<script>",
+        answer: 3,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
+    {
+        question: "",
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: ,
+    },
 ]

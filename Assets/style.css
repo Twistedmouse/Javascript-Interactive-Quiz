@@ -22,7 +22,6 @@
 
 /* selects all elements */
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     /* makes rems and ems = 10px */
@@ -42,8 +41,12 @@ h4{
     display: flex;
     justify-content: center;
     font-size: 2.7rem;
-    margin-bottom: 200px;
 }
+footer{
+    position: relative;
+    bottom: 180px;
+}
+
 /* main container to hold my card */
 .contanier{
     display: flex;
@@ -94,6 +97,11 @@ h4{
     .contanier{
         width: 100vw;
     }
+    h4{
+        position: relative;
+        top: 19rem;
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -118,8 +126,7 @@ h4{
     }
     h4{
         position: relative;
-        
-        left: 3rem;
+        top: 15rem;
         font-size: 15px;
     }
     #rulesp{
@@ -128,3 +135,4 @@ h4{
         margin-left: 16.5rem;
     }
 }
+

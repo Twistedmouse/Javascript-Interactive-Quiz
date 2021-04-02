@@ -40,7 +40,7 @@ const CHOICES = Array.from(document.querySelectorAll(".choice-text"));
 const progressTEXT = document.querySelector("#progressText");
 const progressBarFull = document.querySelector("#progressBarFull");
 const scoreText = document.querySelector("#score");
-const MAX_QUIESTIONS = 8;
+const MAX_QUESTIONS = 8;
 
 let TotalScore = scoreText;
 let currentQuestion = {};
@@ -150,7 +150,7 @@ function getNewQuestion() {
 
 function answerChoices() {
     let choicesElement = document.querySelector(".choiceText")
-    let choiceObjects = 
+    let choiceObjects = CHOICES[]
 }
 
 

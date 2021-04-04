@@ -137,6 +137,7 @@ let questions = [
 ]
 console.log(questions)
 
+var timerX;
 let questionObject
 
 
@@ -146,13 +147,6 @@ let questionObject
 //timer if wrong answer score go down by 3
 //if timer reaches 0 quizEnd()
 //timer score gets logged into high score
-// $("#startQuiz").click(function() {
-//     setInterval(() {
-//         score--;
-//     }, 1000);
-    
-//     console.log(score)
-// })
 
 startGame() 
 //funtion to reset my start game
@@ -161,6 +155,12 @@ function startGame() {
     score = 60
     // availableQuestion = questions.sort(() => Math.random( - .5))
     getNewQuestion()
+    timerX = setInterval(function() {
+        score--;
+        document.getElementById('score').innerText = score;
+        console.log(score)
+    }, 1200);
+    
 }
 
 //function to get the question to display 

@@ -5,7 +5,7 @@ body{
 
 #questionTitle{
     
-    /* width: 520px; */
+    width: 600px;
     text-shadow: 2px 2px grey;
     padding: 1rem;
 }
@@ -20,6 +20,8 @@ body{
     background:linear-gradient(90deg, rgb(78, 181, 255)30%, rgb(154, 141, 141)90% );
     width: 50rem;
     height: 5rem;
+    font-size: 26px;
+    line-height: 1em;
 }
 
 .choice-container:hover{
@@ -73,6 +75,9 @@ body{
     margin-top: 0.3rem;
 }
 
+.choice-text{
+    
+}
 
 @media screen and (max-width: 768px) {
     .contanier{

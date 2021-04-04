@@ -194,9 +194,8 @@ $(".choice-container").click(function(e){
         // console.log("true")
         $(targetElement).addClass("correct")
        } else {
-        score --
-        score --
-        score --
+        //    decrements the score but find a better way. !!!!!!!!!!!!!!!!!!!!
+        score -= 3
         $(targetElement).addClass("incorrect")
         console.log(score)
        }

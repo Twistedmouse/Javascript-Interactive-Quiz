@@ -35,20 +35,24 @@ High score button/screen:
 */
 
 // list of variables 
-const QUESTION = document.querySelector("#question");
-const CHOICES = Array.from(document.querySelectorAll(".choice-text"));
+// both these variables are for the progress bar add if you have time. 
 const progressTEXT = document.querySelector("#progressText");
 const progressBarFull = document.querySelector("#progressBarFull");
+//the score text is the timer and wil become the final score
 const scoreText = document.querySelector("#score");
+// this variable is just to set the max amount of questions for when i add a randomizer 
 const MAX_QUESTIONS = 8;
 
+//variable that hold the value of the timer for the final score 
 let TotalScore = scoreText;
-let currentQuestion = {};
+//variable for correct choice 
 let acceptingAnswers = true;
 // score is my timer
 let score = 60;
 let questionCounter = 0;
 let availableQuestion = [];
+// choices container 
+let choicesCounter 
 
 // an array that is basically the whole quiz
 let questions = [
@@ -131,26 +135,60 @@ let questions = [
         answer: "//This is a comment"
     }
 ]
+console.log(questions)
+
+let questionObject
 
 startGame() 
 //funtion to reset my start game
 function startGame() {
     questionCounter = 0
     score = 60
+    // availableQuestion = questions.sort(() => Math.random( - .5))
     getNewQuestion()
 }
+
 //function to get the question to display 
 function getNewQuestion() {
     let titleElement = document.querySelector("#questionTitle")
-    let questionObject = questions[questionCounter]
+    questionObject = questions[questionCounter]
     let titleText = questionObject.title
+    for (let i = 0; i < questionObject.choices.length; i++) {
+        let choiceButton = document.getElementById(i)
+        choiceButton.textContent = questionObject.choices[i]
+    }
     titleElement.textContent = titleText
-    answerChoices()
 }
 
-function answerChoices() {
-    let choicesElement = document.querySelector(".choiceText")
-    let choiceObjects = CHOICES[]
-}
+//buttons for choices
+// const btnElement = document.getElementById("btn")
+$(".choice-container").click(function(e){
+    if (questionCounter >= questions.length) {
+        quizEnd()
+        console.log("quiz finished!!")
+    } else {
+       let targetElement = e.target
+       console.log(targetElement)
+       let answer = targetElement.innerText
+       if (answer == questionObject.answer) {
+        console.log("true")
+        $(targetElement).addClass("correct")
+       } else {
+        $(targetElement).addClass("incorrect")
+       }
+       setTimeout(() => {
+        $(targetElement).removeClass("incorrect")
+        $(targetElement).removeClass("correct")
+        questionCounter++
+        getNewQuestion()
+       }, 1000 );
+    }
+} 
+    )
+
+
+
+
+
 
 

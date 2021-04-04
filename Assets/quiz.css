@@ -3,7 +3,9 @@ body{
     color: whitesmoke;
 }
 
-#question{
+#questionTitle{
+    
+    /* width: 520px; */
     text-shadow: 2px 2px grey;
     padding: 1rem;
 }
@@ -31,13 +33,13 @@ body{
 .correct {
     background: linear-gradient(90deg, whitesmoke, greenyellow, green, ghostwhite);
     background-position: left;
-    background-size: ;
+    /* background-size: ; */
     animation: grad-bg 5s infinite alternate;
 }
 .incorrect {
-    background: linear-gradient(90deg, rgb(81, 80, 80), rgb(253, 4, 4), rgb(98, 5, 5), rgb(35, 4, 4))
+    background: linear-gradient(90deg, rgb(81, 80, 80), rgb(253, 4, 4), rgb(98, 5, 5), rgb(35, 4, 4));
     background-position: left;
-    background-size: ;
+    /* background-size: ; */
     animation: grad-bg 5s infinite alternate;
 }
 
@@ -69,7 +71,9 @@ body{
     .contanier{
         min-width: 100vw;
     }
-
+    .hud-item{
+        margin-right: 6rem;
+    }
     /* body{
         height: 100%;
     } */
@@ -92,13 +96,15 @@ body{
         padding-left: 10rem;
         flex-direction: column;
     }
-    #question{
+    #questionTitle{
         display: flex;
         justify-content: center;
         align-content: center;
         width: 320px;
         margin-left: 20rem;
     }
+
+    
 
 }
    

@@ -75,8 +75,8 @@ body{
     margin-top: 0.3rem;
 }
 
-.choice-text{
-    
+.hud-main-text{
+    color:rgb(223, 219, 222);
 }
 
 @media screen and (max-width: 768px) {

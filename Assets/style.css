@@ -41,6 +41,7 @@ h4{
     display: flex;
     justify-content: center;
     font-size: 2.7rem;
+    margin-top: 80px;
 }
 footer{
     position: relative;

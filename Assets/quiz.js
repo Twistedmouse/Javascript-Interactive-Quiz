@@ -203,11 +203,3 @@ $(".choice-container").click(function(e){
     )
 
 
-
-
-
-
-
-
-
-

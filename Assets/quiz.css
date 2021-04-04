@@ -30,17 +30,24 @@ body{
     transform: transform 100ms;
 }
 
+@keyframes grad-bg {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
 .correct {
     background: linear-gradient(90deg, whitesmoke, greenyellow, green, ghostwhite);
-    background-position: left;
-    /* background-size: ; */
-    animation: grad-bg 5s infinite alternate;
+    background-size: 300px;
+    animation: grad-bg 3s infinite alternate;
 }
 .incorrect {
     background: linear-gradient(90deg, rgb(81, 80, 80), rgb(253, 4, 4), rgb(98, 5, 5), rgb(35, 4, 4));
-    background-position: left;
-    /* background-size: ; */
-    animation: grad-bg 5s infinite alternate;
+    background-size: 1000px;
+    animation: grad-bg 1s infinite alternate;
 }
 
 #hud{

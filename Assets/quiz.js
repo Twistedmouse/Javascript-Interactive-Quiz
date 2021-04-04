@@ -159,6 +159,10 @@ function startGame() {
         score--;
         document.getElementById('score').innerText = score;
         console.log(score)
+        if (score === 0) {
+            clearInterval(timerX)
+            quizEnd()
+        }
     }, 1200);
     
 }
@@ -180,16 +184,21 @@ function getNewQuestion() {
 $(".choice-container").click(function(e){
     if (questionCounter >= questions.length) {
         quizEnd()
+        //console log for quiz finished
         console.log("quiz finished!!")
     } else {
        let targetElement = e.target
-       console.log(targetElement)
+    //    console.log(targetElement)
        let answer = targetElement.innerText
        if (answer == questionObject.answer) {
-        console.log("true")
+        // console.log("true")
         $(targetElement).addClass("correct")
        } else {
+        score --
+        score --
+        score --
         $(targetElement).addClass("incorrect")
+        console.log(score)
        }
        setTimeout(() => {
         $(targetElement).removeClass("incorrect")

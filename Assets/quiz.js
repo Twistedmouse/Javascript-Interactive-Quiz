@@ -139,6 +139,21 @@ console.log(questions)
 
 let questionObject
 
+
+    // timerCount()
+    // wait 1 second before start timer
+//timer must change score to count down each second
+//timer if wrong answer score go down by 3
+//if timer reaches 0 quizEnd()
+//timer score gets logged into high score
+// $("#startQuiz").click(function() {
+//     setInterval(() {
+//         score--;
+//     }, 1000);
+    
+//     console.log(score)
+// })
+
 startGame() 
 //funtion to reset my start game
 function startGame() {
@@ -185,6 +200,9 @@ $(".choice-container").click(function(e){
     }
 } 
     )
+
+
+
 
 
 

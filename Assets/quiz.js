@@ -107,13 +107,6 @@ let questions = [
         answer: "if (i == 5)"
     },
     {
-        title: 'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
-        choices:[
-            "if i =! 5 then", "if i <> 5", "if (i <> 5)", "if (i != 5) "
-        ],
-        answer: "if (i != 5) "
-    },
-    {
         title: "How does a WHILE loop start?",
         choices:[
             "while i = 1 to 10", "while (i <= 10) ", "while (i <= 10; i++)", "while: i = 1 <= 10 + 1"

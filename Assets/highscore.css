@@ -1,0 +1,85 @@
+
+
+:root{
+    /* gradiet Varaiable */
+    --gradient: linear-gradient(85deg, #df2727, #e40c8a, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #f8ff70, #70e9eb, #df2727, #e40c8a, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #f8ff70, #70e9eb, #df2727, #e40c8a, #7edf5e93, #53d8a9, #1546da, #845ec2, #ec7753, #eb8fde, #f8ff70, #70e9eb);
+    background-image:var(--gradient);
+    background-size: 1000%;
+    background-position: left;
+    height: 100%;
+    animation: grad-bg 20s infinite alternate;
+}
+
+@keyframes grad-bg {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+h1{
+    animation: text-grad 10s infinite alternate;
+    margin-bottom: 55rem;
+}
+@keyframes text-grad {
+    0%{
+        color: chartreuse;
+    }
+    20%{
+        color: rgb(235, 144, 26);
+    }
+    50%{
+        color: transparent;
+    }
+    70%{
+        color: rgb(41, 41, 221);
+    }
+    85%{
+        color: whitesmoke;
+    }
+    100%{
+        color: transparent;
+    }
+}
+
+h4{
+    margin-top: 17rem;
+}
+
+.contanier{
+    margin: 5rem 70rem;
+    background: rgba(255, 255, 255, 0.449);
+    border-radius: 50px;
+    border-width: 0.5rem;
+    border-color: rgba(132, 132, 132, 0.557);
+    border-style: inset;
+    width: 50rem;
+    height: 70rem;
+    /* inner box shadow */
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+#retryBtn{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 80rem;
+    width: 30rem;
+    font-size: 50px;
+    bottom: 9rem;
+
+}
+
+#startQuiz.btn{
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    border-radius: 50px;
+    border-width: 0.3rem;
+    border-color: rgba(132, 132, 132, 0.557);
+    border-style: inset;
+}

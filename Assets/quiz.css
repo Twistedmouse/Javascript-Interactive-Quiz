@@ -80,7 +80,7 @@ body{
 }
 
 .hide{
-    /* display: none; */
+    display: none;
 }
 #name{
     position:absolute;

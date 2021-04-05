@@ -214,5 +214,4 @@ function quizEnd() {
     clearInterval(timerX);
     $(initialsScoreText).removeClass("hide")
     
-
 }

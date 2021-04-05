@@ -42,7 +42,7 @@ const progressBarFull = document.querySelector("#progressBarFull");
 const scoreText = document.querySelector("#score");
 // this variable is just to set the max amount of questions for when i add a randomizer 
 const MAX_QUESTIONS = 8;
-
+let initialsScoreText = document.getElementsByClassName("hide")
 //variable that hold the value of the timer for the final score 
 let TotalScore = scoreText;
 //variable for correct choice 
@@ -148,6 +148,7 @@ function startGame() {
     score = 60
     // availableQuestion = questions.sort(() => Math.random( - .5))
     getNewQuestion()
+    // TIMER function
     timerX = setInterval(function() {
         score--;
         document.getElementById('score').innerText = score;
@@ -202,4 +203,16 @@ $(".choice-container").click(function(e){
 } 
     )
 
+// when quiz ends prompt user for initials only two initials to be entered 
+    // save remaining time at score and add initials and score to the high score list 
+    // go to high score page
+function quizEnd() {
 
+    setTimeout(() => {
+        //just so the page dosnt just flash over to fast 
+    }, 500);
+    clearInterval(timerX);
+    $(initialsScoreText).removeClass("hide")
+    
+
+}

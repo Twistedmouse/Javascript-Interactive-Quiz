@@ -86,8 +86,8 @@ body{
     position:absolute;
     color: black;
     background: rgba(255, 255, 255, 0.557);
-    right: 29rem;
-    bottom: 37rem;
+    right: 40rem;
+    bottom: 30rem;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;
@@ -99,8 +99,8 @@ body{
     position: absolute;
     color: black;
     background: rgba(255, 255, 255, 0.945);
-    bottom: 43.5rem;
-    right: 8rem;
+    bottom: 36.4rem;
+    right: 17rem;
     -moz-box-shadow:    inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow:         inset 0 0 10px #000000;

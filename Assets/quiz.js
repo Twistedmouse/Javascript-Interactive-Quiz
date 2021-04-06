@@ -153,7 +153,7 @@ function startGame() {
         score--;
         document.getElementById('score').innerText = score;
         console.log(score)
-        if (score === 0) {
+        if (score <= 0) {
             clearInterval(timerX)
             quizEnd()
         }
@@ -215,3 +215,12 @@ function quizEnd() {
     $(initialsScoreText).removeClass("hide")
     
 }
+
+
+$("#submitButton").click(function(){
+    
+    document.location.href = 'highscore.html'
+
+})
+
+

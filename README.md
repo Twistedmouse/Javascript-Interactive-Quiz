@@ -12,3 +12,7 @@ UWA Web Dev Bootcamp - feb 2021
 ## Screenshots and Decription:
 
 ---
+
+COMMIT NOTES FROM WHEN AT TOMS
+re postioned highscore screeen and added media query
+changed rety button to home but and link to index page 

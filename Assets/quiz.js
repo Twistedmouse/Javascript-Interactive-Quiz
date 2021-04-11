@@ -71,62 +71,62 @@ let questions = [
         ],
         answer: "Both the <head> section and the <body> section are correct"
     },
-    {
-        title: 'What is the correct syntax for referring to an external script called "xxx.js"?',
-        choices:[
-            '<script src="xxx.js">', '<script href="xxx.js">', '<script name="xxx.js">', '<script link="xxx.js">'
-        ],
-        answer: '<script src="xxx.js">'
-    },
-    {
-        title: 'How do you write "Hello World" in an alert box?',
-        choices:[
-            'msg("Hello World");', 'msgBox("Hello World");', 'alertBox("Hello World");', 'alert("Hello World");'
-        ],
-        answer: 'alert("Hello World");'
-    },
-    {
-        title: "How do you create a function in JavaScript?",
-        choices:[
-            "function = myFunction()", "function:myFunction()", "function myFunction()", "function, myFunction:"
-        ],
-        answer: "function myFunction()"
-    },
-    {
-        title: 'How do you call a function named "myFunction"?',
-        choices:[ 
-            "myFunction()", "call myFunction()", "call function myFunction()", "ringRing pick up the myFunction()"
-        ],
-        answer: "myFunction()"
-    },
-    {
-        title: "How to write an IF statement in JavaScript?",
-        choices:[
-            "if (i == 5)", "if i == 5 then", "if i = 5", "if i = 5 then"
-        ],
-        answer: "if (i == 5)"
-    },
-    {
-        title: "How does a WHILE loop start?",
-        choices:[
-            "while i = 1 to 10", "while (i <= 10) ", "while (i <= 10; i++)", "while: i = 1 <= 10 + 1"
-        ],
-        answer: "while (i <= 10)"
-    },
-    {
-        title: "How does a FOR loop start?",
-        choices:[
-            "for (i = 0; i <= 5)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i <= 5; i++)"
-        ],
-        answer: "for (i = 0; i <= 5; i++)"
-    },
-    {
-        title: "How can you add a comment in a JavaScript?",
-        choices:[
-            "<!--This is a comment-->", "-this is a comment-", "//This is a comment  ", "This is a comment"
-        ],
-        answer: "//This is a comment"
-    }
+    // {
+    //     title: 'What is the correct syntax for referring to an external script called "xxx.js"?',
+    //     choices:[
+    //         '<script src="xxx.js">', '<script href="xxx.js">', '<script name="xxx.js">', '<script link="xxx.js">'
+    //     ],
+    //     answer: '<script src="xxx.js">'
+    // },
+    // {
+    //     title: 'How do you write "Hello World" in an alert box?',
+    //     choices:[
+    //         'msg("Hello World");', 'msgBox("Hello World");', 'alertBox("Hello World");', 'alert("Hello World");'
+    //     ],
+    //     answer: 'alert("Hello World");'
+    // },
+    // {
+    //     title: "How do you create a function in JavaScript?",
+    //     choices:[
+    //         "function = myFunction()", "function:myFunction()", "function myFunction()", "function, myFunction:"
+    //     ],
+    //     answer: "function myFunction()"
+    // },
+    // {
+    //     title: 'How do you call a function named "myFunction"?',
+    //     choices:[ 
+    //         "myFunction()", "call myFunction()", "call function myFunction()", "ringRing pick up the myFunction()"
+    //     ],
+    //     answer: "myFunction()"
+    // },
+    // {
+    //     title: "How to write an IF statement in JavaScript?",
+    //     choices:[
+    //         "if (i == 5)", "if i == 5 then", "if i = 5", "if i = 5 then"
+    //     ],
+    //     answer: "if (i == 5)"
+    // },
+    // {
+    //     title: "How does a WHILE loop start?",
+    //     choices:[
+    //         "while i = 1 to 10", "while (i <= 10) ", "while (i <= 10; i++)", "while: i = 1 <= 10 + 1"
+    //     ],
+    //     answer: "while (i <= 10)"
+    // },
+    // {
+    //     title: "How does a FOR loop start?",
+    //     choices:[
+    //         "for (i = 0; i <= 5)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i <= 5; i++)"
+    //     ],
+    //     answer: "for (i = 0; i <= 5; i++)"
+    // },
+    // {
+    //     title: "How can you add a comment in a JavaScript?",
+    //     choices:[
+    //         "<!--This is a comment-->", "-this is a comment-", "//This is a comment  ", "This is a comment"
+    //     ],
+    //     answer: "//This is a comment"
+    // }
 ]
 console.log(questions)
 
@@ -216,7 +216,7 @@ function quizEnd() {
     
 }
 
-
+//links location to submit score button to my highschool screen
 $("#submitButton").click(function(){
     
     document.location.href = 'highscore.html'

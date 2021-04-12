@@ -213,14 +213,12 @@ function quizEnd() {
     }, 500);
     clearInterval(timerX);
     $(initialsScoreText).removeClass("hide")
-    
 }
 
 //links location to submit score button to my highschool screen
 $("#submitButton").click(function(){
     
     document.location.href = 'highscore.html'
-
 })
 
 

@@ -176,11 +176,7 @@ function getNewQuestion() {
 //buttons for choices
 // const btnElement = document.getElementById("btn")
 $(".choice-container").click(function(e){
-    if (questionCounter+1 >= questions.length) {
-        quizEnd()
-        //console log for quiz finished
-        console.log("quiz finished!!")
-    } else {
+    
        let targetElement = e.target
     //    console.log(targetElement)
        let answer = targetElement.innerText
@@ -197,10 +193,18 @@ $(".choice-container").click(function(e){
         $(targetElement).removeClass("incorrect")
         $(targetElement).removeClass("correct")
         questionCounter++
-        getNewQuestion()
+        if (questionCounter >= questions.length) { //had to add +1 to .length cos idex starts at 0 but .length starts at 1 BUG FIX
+            quizEnd()
+            //console log for quiz finished
+            console.log("quiz finished!!")
+        } 
+        else{
+            getNewQuestion()
+        }
+        
        }, 1000 );
     }
-} 
+ 
     )
 
     
@@ -208,12 +212,13 @@ $(".choice-container").click(function(e){
     // save remaining time at score and add initials and score to the high score list 
 function quizEnd() {
 
+    clearInterval(timerX);
     setTimeout(() => {
         //just so the page dosnt just flash over to fast 
-        
-    }, 500);
-    clearInterval(timerX);
-    $(initialsScoreText).removeClass("hide")
+        $(initialsScoreText).removeClass("hide")
+    }, 800);
+    
+    
 
 }
 

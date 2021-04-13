@@ -226,7 +226,9 @@ function quizEnd() {
 //links location to submit score button to my highschool screen
 $("#submitButton").click(function(){
 
+    scoreSubmit()
     document.location.href = 'highscore.html'
+    
 })
 
 //high score pseudo plan:
@@ -238,13 +240,30 @@ if score is higher move to top of list
 only hold a certain number of scores
 
 notes from my main task: 
+need function to check if the scores higher and on top 
 i will need a var to hold both score and name 
 a if statement for if the scores higher 
 a var for max score limit on board
 */
+const maxNumberOfHighScores = 10;
+let scoreName = getElementById("name"); //todo
 
+function scoreSubmit() { 
+    checkHighScore()
+    const submitScoreAndName = {score, scoreName};
+    
+    
+ }
+ 
+ function checkHighScore() { 
+    //checking for high score priority
+    const highScores = JSON.parse(highScoresString) || [];
+    const lowestScore = highScores[maxNumberOfHighScores - 1];
+    
+    if (highScores > lowestScore) {
 
-
+    }
+  }
 
 
 // example that didnt work but still look through for ideas: 

@@ -193,6 +193,7 @@ $(".choice-container").click(function(e){
         $(targetElement).removeClass("incorrect")
         $(targetElement).removeClass("correct")
         questionCounter++
+
         if (questionCounter >= questions.length) { //had to add +1 to .length cos idex starts at 0 but .length starts at 1 BUG FIX
             quizEnd()
             //console log for quiz finished
@@ -216,7 +217,7 @@ function quizEnd() {
     setTimeout(() => {
         //just so the page dosnt just flash over to fast 
         $(initialsScoreText).removeClass("hide")
-    }, 800);
+    }, 300);
     
     
 
@@ -241,6 +242,8 @@ i will need a var to hold both score and name
 a if statement for if the scores higher 
 a var for max score limit on board
 */
+
+
 
 
 

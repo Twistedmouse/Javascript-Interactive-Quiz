@@ -13,6 +13,4 @@ UWA Web Dev Bootcamp - feb 2021
 
 ---
 
-COMMIT NOTES FROM WHEN AT TOMS
-re postioned highscore screeen and added media query
-changed rety button to home but and link to index page 
+highscore rescourse link https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68

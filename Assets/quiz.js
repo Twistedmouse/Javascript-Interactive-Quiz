@@ -176,7 +176,7 @@ function getNewQuestion() {
 //buttons for choices
 // const btnElement = document.getElementById("btn")
 $(".choice-container").click(function(e){
-    if (questionCounter >= questions.length) {
+    if (questionCounter+1 >= questions.length) {
         quizEnd()
         //console log for quiz finished
         console.log("quiz finished!!")
@@ -188,7 +188,7 @@ $(".choice-container").click(function(e){
         // console.log("true")
         $(targetElement).addClass("correct")
        } else {
-        //    decrements the score but find a better way. !!!!!!!!!!!!!!!!!!!!
+        //    decrements the score 
         score -= 3
         $(targetElement).addClass("incorrect")
         console.log(score)
@@ -203,22 +203,76 @@ $(".choice-container").click(function(e){
 } 
     )
 
+    
 // when quiz ends prompt user for initials only two initials to be entered 
     // save remaining time at score and add initials and score to the high score list 
-    // go to high score page
 function quizEnd() {
 
     setTimeout(() => {
         //just so the page dosnt just flash over to fast 
+        
     }, 500);
     clearInterval(timerX);
     $(initialsScoreText).removeClass("hide")
+
 }
 
 //links location to submit score button to my highschool screen
 $("#submitButton").click(function(){
-    
+
     document.location.href = 'highscore.html'
 })
 
+//high score pseudo plan:
+/*
+main task: 
+locally store timer score and name input from the final submit btn
+add timer score and name to leader board
+if score is higher move to top of list 
+only hold a certain number of scores
 
+notes from my main task: 
+i will need a var to hold both score and name 
+a if statement for if the scores higher 
+a var for max score limit on board
+*/
+
+
+
+// example that didnt work but still look through for ideas: 
+
+// //highscore tracker var list
+// const maxNumberOfHighScores = 10;
+// const HIGH_SCORES = "highScores";
+// const highScoresString = localStorage.getItem(HIGH_SCORES);
+
+// function checkingHighScore(highScoresScore) { 
+//     const highScores = JSON.parse(highScoresString) || [];
+//     const lowestScore = highScores[maxNumberOfHighScores - 1]?.score ?? 0;
+
+//     if (highScoresScore > lowestScore) {
+//         saveHigh(highScoresScore, highScores); //todo
+//         showHighScores(); //todo
+//     }
+//  }
+
+//  const highScoreList = document.getElementById(HIGH_SCORES);
+//  highScoreList.innerHTML = highScores.map((score)=> `<li>${score.score} - ${score.name}`);
+
+//  function showHighScores() { 
+//      const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) || [];
+//      const highScoreList = document.getElementById(HIGH_SCORES);
+
+//      highScoreList.innerHTML = highScores
+//      .map((score)=> `<li>${score.score} - ${score.name}`)
+//      .join('');
+//   }
+
+ // let scoreName = getElementById("name");
+    // checkHighScore(account.highScoresScore); //added for checkhighscores
+
+    // const newScore = {score, scoreName}; // var to hold both score and name in one place
+    // highScores.push(newScore) //adds to list
+    // highScores.sort((a, b) => b.score - a.score) //sorts the list
+    // highScores.splice(maxNumberOfHighScores) //selects new list
+    // localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores)) //saves to localstorage 

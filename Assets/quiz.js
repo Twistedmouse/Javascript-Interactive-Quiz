@@ -41,7 +41,7 @@ const progressBarFull = document.querySelector("#progressBarFull");
 //the score text is the timer and wil become the final score
 const scoreText = document.querySelector("#score");
 // this variable is just to set the max amount of questions for when i add a randomizer 
-const MAX_QUESTIONS = 8;
+const MAX_QUESTIONS = 10;
 let initialsScoreText = document.getElementsByClassName("hide")
 //variable that hold the value of the timer for the final score 
 let TotalScore = scoreText;
@@ -71,13 +71,13 @@ let questions = [
         ],
         answer: "Both the <head> section and the <body> section are correct"
     },
-    // {
-    //     title: 'What is the correct syntax for referring to an external script called "xxx.js"?',
-    //     choices:[
-    //         '<script src="xxx.js">', '<script href="xxx.js">', '<script name="xxx.js">', '<script link="xxx.js">'
-    //     ],
-    //     answer: '<script src="xxx.js">'
-    // },
+    {
+        title: 'What is the correct syntax for referring to an external script called "xxx.js"?',
+        choices:[
+            '<script src="xxx.js">', '<script href="xxx.js">', '<script name="xxx.js">', '<script link="xxx.js">'
+        ],
+        answer: '<script src="xxx.js">'
+    },
     // {
     //     title: 'How do you write "Hello World" in an alert box?',
     //     choices:[
@@ -161,6 +161,7 @@ function startGame() {
     
 }
 
+let choiceButton;
 //function to get the question to display 
 function getNewQuestion() {
     let titleElement = document.querySelector("#questionTitle")
@@ -171,7 +172,11 @@ function getNewQuestion() {
         choiceButton.textContent = questionObject.choices[i]
     }
     titleElement.textContent = titleText
+    // if (questionObject.length > 3){
+    //     choiceButton.disable = true;
+    // }
 }
+
 
 //buttons for choices
 // const btnElement = document.getElementById("btn")
@@ -194,7 +199,12 @@ $(".choice-container").click(function(e){
         $(targetElement).removeClass("correct")
         questionCounter++
 
-        if (questionCounter >= questions.length) { //had to add +1 to .length cos idex starts at 0 but .length starts at 1 BUG FIX
+// progress bar had to be put after questionCounter ++ or it wouldn't add the last question to bar progress 
+        progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
+        if (questionCounter >= questions.length) { 
+            //local storage!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (reminder)
+            localStorage.setItem("recentScore", score)
             quizEnd()
             //console log for quiz finished
             console.log("quiz finished!!")
@@ -212,23 +222,21 @@ $(".choice-container").click(function(e){
 // when quiz ends prompt user for initials only two initials to be entered 
     // save remaining time at score and add initials and score to the high score list 
 function quizEnd() {
-
     clearInterval(timerX);
+    choiceButton.disable = true;// TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (REMINDER)
     setTimeout(() => {
         //just so the page dosnt just flash over to fast 
         $(initialsScoreText).removeClass("hide")
     }, 300);
     
-    
-
 }
 
 //links location to submit score button to my highschool screen
 $("#submitButton").click(function(){
 
-    scoreSubmit()
+    console.log(submitButton)
     document.location.href = 'highscore.html'
-    
+    scoreSubmit() //invoking scoreSubmit when the button is pressed    
 })
 
 //high score pseudo plan:
@@ -246,17 +254,17 @@ a if statement for if the scores higher
 a var for max score limit on board
 */
 const maxNumberOfHighScores = 10;
-let scoreName = getElementById("name"); //todo
+let scoreName = getElementById("name"); 
+const recentScore = localStorage.getItem("score");
+highScores.innerText = recentScore;
 
-function scoreSubmit() { 
-    checkHighScore()
-    const submitScoreAndName = {score, scoreName};
-    
-    
+function scoreSubmit(event) { 
+    event.preventDefault();
  }
  
  function checkHighScore() { 
     //checking for high score priority
+    const highScoresString = localStorage.getItem(highScores, scoreName);
     const highScores = JSON.parse(highScoresString) || [];
     const lowestScore = highScores[maxNumberOfHighScores - 1];
     
@@ -266,40 +274,32 @@ function scoreSubmit() {
   }
 
 
-// example that didnt work but still look through for ideas: 
 
-// //highscore tracker var list
-// const maxNumberOfHighScores = 10;
-// const HIGH_SCORES = "highScores";
-// const highScoresString = localStorage.getItem(HIGH_SCORES);
 
-// function checkingHighScore(highScoresScore) { 
-//     const highScores = JSON.parse(highScoresString) || [];
-//     const lowestScore = highScores[maxNumberOfHighScores - 1]?.score ?? 0;
+//   attempt one fail:
 
-//     if (highScoresScore > lowestScore) {
-//         saveHigh(highScoresScore, highScores); //todo
-//         showHighScores(); //todo
-//     }
+//   const maxNumberOfHighScores = 10;
+// let scoreName = getElementById("name"); //todo
+
+// function scoreSubmit(event) { 
+//     checkHighScore()
+//     const highScoreList = document.getElementById(highScores);
+//     const submitScoreAndName = {score, scoreName}; // probably wont need a forloop inside a forloop but try it if stuck 
+//     event.preventDefault();
+//     localStorage.setItem(highScores,submitScoreAndName);
+//     highScoreList.innerHTML = highScores
+//     localStorage.getItem(highScores, submitScoreAndName)
+//     //something with apendChild maybe 
+//     console.log(highScores)
 //  }
+ 
+//  function checkHighScore() { 
+//     //checking for high score priority
+//     const highScoresString = localStorage.getItem(highScores, scoreName);
+//     const highScores = JSON.parse(highScoresString) || [];
+//     const lowestScore = highScores[maxNumberOfHighScores - 1];
+    
+//     if (highScores > lowestScore) {
 
-//  const highScoreList = document.getElementById(HIGH_SCORES);
-//  highScoreList.innerHTML = highScores.map((score)=> `<li>${score.score} - ${score.name}`);
-
-//  function showHighScores() { 
-//      const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) || [];
-//      const highScoreList = document.getElementById(HIGH_SCORES);
-
-//      highScoreList.innerHTML = highScores
-//      .map((score)=> `<li>${score.score} - ${score.name}`)
-//      .join('');
+//     }
 //   }
-
- // let scoreName = getElementById("name");
-    // checkHighScore(account.highScoresScore); //added for checkhighscores
-
-    // const newScore = {score, scoreName}; // var to hold both score and name in one place
-    // highScores.push(newScore) //adds to list
-    // highScores.sort((a, b) => b.score - a.score) //sorts the list
-    // highScores.splice(maxNumberOfHighScores) //selects new list
-    // localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores)) //saves to localstorage 

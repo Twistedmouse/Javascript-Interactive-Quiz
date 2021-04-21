@@ -78,55 +78,55 @@ let questions = [
         ],
         answer: '<script src="xxx.js">'
     },
-    // {
-    //     title: 'How do you write "Hello World" in an alert box?',
-    //     choices:[
-    //         'msg("Hello World");', 'msgBox("Hello World");', 'alertBox("Hello World");', 'alert("Hello World");'
-    //     ],
-    //     answer: 'alert("Hello World");'
-    // },
-    // {
-    //     title: "How do you create a function in JavaScript?",
-    //     choices:[
-    //         "function = myFunction()", "function:myFunction()", "function myFunction()", "function, myFunction:"
-    //     ],
-    //     answer: "function myFunction()"
-    // },
-    // {
-    //     title: 'How do you call a function named "myFunction"?',
-    //     choices:[ 
-    //         "myFunction()", "call myFunction()", "call function myFunction()", "ringRing pick up the myFunction()"
-    //     ],
-    //     answer: "myFunction()"
-    // },
-    // {
-    //     title: "How to write an IF statement in JavaScript?",
-    //     choices:[
-    //         "if (i == 5)", "if i == 5 then", "if i = 5", "if i = 5 then"
-    //     ],
-    //     answer: "if (i == 5)"
-    // },
-    // {
-    //     title: "How does a WHILE loop start?",
-    //     choices:[
-    //         "while i = 1 to 10", "while (i <= 10) ", "while (i <= 10; i++)", "while: i = 1 <= 10 + 1"
-    //     ],
-    //     answer: "while (i <= 10)"
-    // },
-    // {
-    //     title: "How does a FOR loop start?",
-    //     choices:[
-    //         "for (i = 0; i <= 5)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i <= 5; i++)"
-    //     ],
-    //     answer: "for (i = 0; i <= 5; i++)"
-    // },
-    // {
-    //     title: "How can you add a comment in a JavaScript?",
-    //     choices:[
-    //         "<!--This is a comment-->", "-this is a comment-", "//This is a comment  ", "This is a comment"
-    //     ],
-    //     answer: "//This is a comment"
-    // }
+    {
+        title: 'How do you write "Hello World" in an alert box?',
+        choices:[
+            'msg("Hello World");', 'msgBox("Hello World");', 'alertBox("Hello World");', 'alert("Hello World");'
+        ],
+        answer: 'alert("Hello World");'
+    },
+    {
+        title: "How do you create a function in JavaScript?",
+        choices:[
+            "function = myFunction()", "function:myFunction()", "function myFunction()", "function, myFunction:"
+        ],
+        answer: "function myFunction()"
+    },
+    {
+        title: 'How do you call a function named "myFunction"?',
+        choices:[ 
+            "myFunction()", "call myFunction()", "call function myFunction()", "ringRing pick up the myFunction()"
+        ],
+        answer: "myFunction()"
+    },
+    {
+        title: "How to write an IF statement in JavaScript?",
+        choices:[
+            "if (i == 5)", "if i == 5 then", "if i = 5", "if i = 5 then"
+        ],
+        answer: "if (i == 5)"
+    },
+    {
+        title: "How does a WHILE loop start?",
+        choices:[
+            "while i = 1 to 10", "while (i <= 10) ", "while (i <= 10; i++)", "while: i = 1 <= 10 + 1"
+        ],
+        answer: "while (i <= 10)"
+    },
+    {
+        title: "How does a FOR loop start?",
+        choices:[
+            "for (i = 0; i <= 5)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i <= 5; i++)"
+        ],
+        answer: "for (i = 0; i <= 5; i++)"
+    },
+    {
+        title: "How can you add a comment in a JavaScript?",
+        choices:[
+            "<!--This is a comment-->", "-this is a comment-", "//This is a comment  ", "This is a comment"
+        ],
+        answer: "//This is a comment"
+    }
 ]
 console.log(questions)
 
@@ -223,7 +223,7 @@ $(".choice-container").click(function(e){
     // save remaining time at score and add initials and score to the high score list 
 function quizEnd() {
     clearInterval(timerX);
-    choiceButton.disable = true;// TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (REMINDER)
+    // choiceButton.disable = true;// TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (REMINDER)
     setTimeout(() => {
         //just so the page dosnt just flash over to fast 
         $(initialsScoreText).removeClass("hide")
